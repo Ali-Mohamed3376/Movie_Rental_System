@@ -9,8 +9,8 @@ namespace MoveRentalSysytem.Models
     public class Producer
     {
         public int ProducerId { get; set; }
-        public string CompanyName { get; set; }
-        public string Country { get; set; }
+        public string CompanyName { get; set; } = string.Empty;
+        public string Country { get; set; } = string.Empty;
 
         public ICollection<Movie> Movies { get; set; } = new HashSet<Movie>();
 

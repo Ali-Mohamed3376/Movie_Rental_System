@@ -9,12 +9,12 @@ namespace MoveRentalSysytem.Models
     public class Movie
     {
         public int MovieId { get; set; }
-        public string Movie_Name { get; set; }
+        public string Movie_Name { get; set; } = string.Empty;
         public int Duration { get; set; }
-        public char? Rating { get; set; }
+        public int? Rating { get; set; }
 
         public int ProducerId { get; set; }
-        public Producer Producer { get; set; }
+        public Producer? Producer { get; set; }
 
 
         public ICollection<Customer_Movie> Customer_Movies { get; set; } = new HashSet<Customer_Movie>();

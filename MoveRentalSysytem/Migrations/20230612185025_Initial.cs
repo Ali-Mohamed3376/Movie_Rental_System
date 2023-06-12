@@ -47,7 +47,7 @@ namespace MoveRentalSysytem.Migrations
                     MovieId = table.Column<int>(type: "int", maxLength: 10, nullable: false),
                     Movie_Name = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
                     Duration = table.Column<int>(type: "int", maxLength: 10, nullable: false),
-                    Rating = table.Column<string>(type: "char(1)", maxLength: 1, nullable: true),
+                    Rating = table.Column<int>(type: "int", nullable: true),
                     ProducerId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

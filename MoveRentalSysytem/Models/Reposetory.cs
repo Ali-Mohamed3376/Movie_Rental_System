@@ -30,16 +30,16 @@ namespace MoveRentalSysytem.Models
 
         public static HashSet<Movie> GetMovies = new HashSet<Movie>()
         {
-            new Movie(){ MovieId = 1, Movie_Name = "El Kaief",   Duration = 2, Rating= 'D', ProducerId = 1},
-            new Movie(){ MovieId = 2, Movie_Name = "El Ghwass",  Duration = 1, Rating= 'B', ProducerId = 2},
-            new Movie(){ MovieId = 3, Movie_Name = "KarKar",     Duration = 3, Rating= 'E', ProducerId = 2},
-            new Movie(){ MovieId = 4, Movie_Name = "El Guass",   Duration = 2, Rating= 'C', ProducerId = 3},
-            new Movie(){ MovieId = 5, Movie_Name = "El Hroup"  , Duration = 4, Rating= 'A', ProducerId = 4},
-            new Movie(){ MovieId = 6, Movie_Name = "Kalb Balady",Duration = 1, Rating= 'E', ProducerId = 1},
-            new Movie(){ MovieId = 7, Movie_Name = "El Qurmoty", Duration = 3, Rating= 'D', ProducerId = 5},
-            new Movie(){ MovieId = 8, Movie_Name = "Hanfy El Obha",Duration = 2, Rating= 'A', ProducerId = 4},
-            new Movie(){ MovieId = 9, Movie_Name = "Kabab Mashwy", Duration = 2, Rating= 'D', ProducerId = 5},
-            new Movie(){ MovieId = 10, Movie_Name = "Amir El Zalam", Duration = 3, Rating= 'A', ProducerId = 6},
+            new Movie(){ MovieId = 1, Movie_Name = "El Kaief",   Duration = 2, Rating= 5, ProducerId = 1},
+            new Movie(){ MovieId = 2, Movie_Name = "El Ghwass",  Duration = 1, Rating= 7, ProducerId = 2},
+            new Movie(){ MovieId = 3, Movie_Name = "KarKar",     Duration = 3, Rating= 9, ProducerId = 2},
+            new Movie(){ MovieId = 4, Movie_Name = "El Guass",   Duration = 2, Rating= 10, ProducerId = 3},
+            new Movie(){ MovieId = 5, Movie_Name = "El Hroup"  , Duration = 4, Rating= 3, ProducerId = 4},
+            new Movie(){ MovieId = 6, Movie_Name = "Kalb Balady",Duration = 1, Rating= 8, ProducerId = 1},
+            new Movie(){ MovieId = 7, Movie_Name = "El Qurmoty", Duration = 3, Rating= 6, ProducerId = 5},
+            new Movie(){ MovieId = 8, Movie_Name = "Hanfy El Obha",Duration = 2, Rating= 5, ProducerId = 4},
+            new Movie(){ MovieId = 9, Movie_Name = "Kabab Mashwy", Duration = 2, Rating= 7, ProducerId = 5},
+            new Movie(){ MovieId = 10, Movie_Name = "Amir El Zalam", Duration = 3, Rating= 10, ProducerId = 6},
         };
 
         public static HashSet<Customer_Movie> Customer_Movies = new HashSet<Customer_Movie>()

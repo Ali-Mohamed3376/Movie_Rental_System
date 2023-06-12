@@ -226,9 +226,8 @@ namespace MoveRentalSysytem.Migrations
                     b.Property<int>("ProducerId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Rating")
-                        .HasMaxLength(1)
-                        .HasColumnType("char");
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
 
                     b.HasKey("MovieId");
 
@@ -243,7 +242,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 2,
                             Movie_Name = "El Kaief",
                             ProducerId = 1,
-                            Rating = "D"
+                            Rating = 5
                         },
                         new
                         {
@@ -251,7 +250,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 1,
                             Movie_Name = "El Ghwass",
                             ProducerId = 2,
-                            Rating = "B"
+                            Rating = 7
                         },
                         new
                         {
@@ -259,7 +258,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 3,
                             Movie_Name = "KarKar",
                             ProducerId = 2,
-                            Rating = "E"
+                            Rating = 9
                         },
                         new
                         {
@@ -267,7 +266,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 2,
                             Movie_Name = "El Guass",
                             ProducerId = 3,
-                            Rating = "C"
+                            Rating = 10
                         },
                         new
                         {
@@ -275,7 +274,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 4,
                             Movie_Name = "El Hroup",
                             ProducerId = 4,
-                            Rating = "A"
+                            Rating = 3
                         },
                         new
                         {
@@ -283,7 +282,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 1,
                             Movie_Name = "Kalb Balady",
                             ProducerId = 1,
-                            Rating = "E"
+                            Rating = 8
                         },
                         new
                         {
@@ -291,7 +290,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 3,
                             Movie_Name = "El Qurmoty",
                             ProducerId = 5,
-                            Rating = "D"
+                            Rating = 6
                         },
                         new
                         {
@@ -299,7 +298,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 2,
                             Movie_Name = "Hanfy El Obha",
                             ProducerId = 4,
-                            Rating = "A"
+                            Rating = 5
                         },
                         new
                         {
@@ -307,7 +306,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 2,
                             Movie_Name = "Kabab Mashwy",
                             ProducerId = 5,
-                            Rating = "D"
+                            Rating = 7
                         },
                         new
                         {
@@ -315,7 +314,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 3,
                             Movie_Name = "Amir El Zalam",
                             ProducerId = 6,
-                            Rating = "A"
+                            Rating = 10
                         });
                 });
 

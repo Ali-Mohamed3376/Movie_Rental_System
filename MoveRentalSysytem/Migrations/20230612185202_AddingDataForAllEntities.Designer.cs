@@ -12,8 +12,8 @@ using MoveRentalSysytem.DBContext;
 namespace MoveRentalSysytem.Migrations
 {
     [DbContext(typeof(MRSContext))]
-    [Migration("20230610141607_AddingDataFroAllEntities")]
-    partial class AddingDataFroAllEntities
+    [Migration("20230612185202_AddingDataForAllEntities")]
+    partial class AddingDataForAllEntities
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -129,21 +129,21 @@ namespace MoveRentalSysytem.Migrations
                         {
                             CustomerId = 1,
                             MovieId = 1,
-                            Date_Rented = new DateTime(2023, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Date_Rented = new DateTime(2023, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Due_Date = new DateTime(2023, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             CustomerId = 2,
                             MovieId = 2,
-                            Date_Rented = new DateTime(2023, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Date_Rented = new DateTime(2023, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Due_Date = new DateTime(2023, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             CustomerId = 3,
                             MovieId = 3,
-                            Date_Rented = new DateTime(2023, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Date_Rented = new DateTime(2023, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Due_Date = new DateTime(2023, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -157,7 +157,7 @@ namespace MoveRentalSysytem.Migrations
                         {
                             CustomerId = 5,
                             MovieId = 5,
-                            Date_Rented = new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Date_Rented = new DateTime(2023, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Due_Date = new DateTime(2023, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -171,21 +171,21 @@ namespace MoveRentalSysytem.Migrations
                         {
                             CustomerId = 4,
                             MovieId = 7,
-                            Date_Rented = new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Date_Rented = new DateTime(2023, 6, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Due_Date = new DateTime(2023, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             CustomerId = 4,
                             MovieId = 8,
-                            Date_Rented = new DateTime(2023, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Date_Rented = new DateTime(2023, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Due_Date = new DateTime(2023, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             CustomerId = 2,
                             MovieId = 9,
-                            Date_Rented = new DateTime(2023, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Date_Rented = new DateTime(2023, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Due_Date = new DateTime(2023, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -194,6 +194,20 @@ namespace MoveRentalSysytem.Migrations
                             MovieId = 10,
                             Date_Rented = new DateTime(2023, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Due_Date = new DateTime(2023, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            CustomerId = 4,
+                            MovieId = 5,
+                            Date_Rented = new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Due_Date = new DateTime(2023, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            CustomerId = 3,
+                            MovieId = 10,
+                            Date_Rented = new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Due_Date = new DateTime(2023, 6, 7, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -215,9 +229,8 @@ namespace MoveRentalSysytem.Migrations
                     b.Property<int>("ProducerId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Rating")
-                        .HasMaxLength(1)
-                        .HasColumnType("char");
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
 
                     b.HasKey("MovieId");
 
@@ -232,7 +245,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 2,
                             Movie_Name = "El Kaief",
                             ProducerId = 1,
-                            Rating = "D"
+                            Rating = 5
                         },
                         new
                         {
@@ -240,7 +253,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 1,
                             Movie_Name = "El Ghwass",
                             ProducerId = 2,
-                            Rating = "B"
+                            Rating = 7
                         },
                         new
                         {
@@ -248,7 +261,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 3,
                             Movie_Name = "KarKar",
                             ProducerId = 2,
-                            Rating = "E"
+                            Rating = 9
                         },
                         new
                         {
@@ -256,7 +269,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 2,
                             Movie_Name = "El Guass",
                             ProducerId = 3,
-                            Rating = "C"
+                            Rating = 10
                         },
                         new
                         {
@@ -264,7 +277,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 4,
                             Movie_Name = "El Hroup",
                             ProducerId = 4,
-                            Rating = "A"
+                            Rating = 3
                         },
                         new
                         {
@@ -272,7 +285,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 1,
                             Movie_Name = "Kalb Balady",
                             ProducerId = 1,
-                            Rating = "E"
+                            Rating = 8
                         },
                         new
                         {
@@ -280,7 +293,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 3,
                             Movie_Name = "El Qurmoty",
                             ProducerId = 5,
-                            Rating = "D"
+                            Rating = 6
                         },
                         new
                         {
@@ -288,7 +301,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 2,
                             Movie_Name = "Hanfy El Obha",
                             ProducerId = 4,
-                            Rating = "A"
+                            Rating = 5
                         },
                         new
                         {
@@ -296,7 +309,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 2,
                             Movie_Name = "Kabab Mashwy",
                             ProducerId = 5,
-                            Rating = "D"
+                            Rating = 7
                         },
                         new
                         {
@@ -304,7 +317,7 @@ namespace MoveRentalSysytem.Migrations
                             Duration = 3,
                             Movie_Name = "Amir El Zalam",
                             ProducerId = 6,
-                            Rating = "A"
+                            Rating = 10
                         });
                 });
 

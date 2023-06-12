@@ -122,8 +122,7 @@ namespace MoveRentalSysytem.DBContext
                     .IsRequired();
 
                 entity.Property(x => x.Rating)
-                    .HasColumnType("char")
-                    .HasMaxLength(1)
+                    .HasColumnType("int")
                     .IsRequired(false);
 
 
@@ -166,7 +165,7 @@ namespace MoveRentalSysytem.DBContext
             modelBuilder.Entity<Producer>().HasData(producers);
             modelBuilder.Entity<Movie>().HasData(Movies);
             modelBuilder.Entity<Customer_Movie>().HasData(customer_Movies);
-        } 
+        }
 
 
     }

@@ -10,8 +10,8 @@ namespace MoveRentalSysytem.Models
     {
         #region Properties
         public int CustomerId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
         public string Address { get; set; }
         public DateTime BirthDate { get; set; }
         public int PhoneNumber { get; set; }

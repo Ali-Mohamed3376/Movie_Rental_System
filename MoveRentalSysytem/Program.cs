@@ -15,19 +15,22 @@ namespace MoveRentalSysytem
 
             // Query -1-
             /// Top 3 Ranted Movie Names
-            
+
             //var q1 = db.Movies.OrderByDescending(x => x.Rating).Take(3);
             //Console.WriteLine("Top 3 Movie Rating:");
-            //foreach (var q in q1)
+            //foreach (var i in q1)
             //{
-            //    Console.WriteLine($"\t--→ {q}");
+            //    Console.WriteLine($"\t--→ {i}");
             //}
 
 
             /// Query -2-
             ///Producer with most movies and movie count
-            
-            //var q2 = db.Producers.Select(p => new { Producer = p.CompanyName, MovieCount = p.Movies.Count }).OrderByDescending(p => p.MovieCount).First();
+
+            //var q2 = db.Producers
+            //            .Select(p => new { Producer = p.CompanyName, MovieCount = p.Movies.Count })
+            //            .OrderByDescending(p => p.MovieCount)
+            //            .First();
             //Console.WriteLine("Producer With Most Movies and Movie Count");
             //Console.WriteLine($"\t-- {q2.Producer}\t\t→ {q2.MovieCount}");
 
@@ -48,7 +51,7 @@ namespace MoveRentalSysytem
 
             //// Query -4-
             ///Full Information About Rentals [ CustomerName, MovieName, RentDate, Over Due Remaining Dayes]
-            
+
             //var q4 = db.Customer_Movies
             //            .Include(x => x.Customer)
             //            .Include(x => x.Movie)
@@ -87,9 +90,9 @@ namespace MoveRentalSysytem
             //    Console.WriteLine(i);
             //}
 
-            //#endregion
+            #endregion
 
-            //db.SaveChanges();
+            db.SaveChanges();
         }
         public static int OverRemainingDayes(DateTime rented, DateTime due)
         {

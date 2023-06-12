@@ -12,7 +12,7 @@ using MoveRentalSysytem.DBContext;
 namespace MoveRentalSysytem.Migrations
 {
     [DbContext(typeof(MRSContext))]
-    [Migration("20230610141435_Initial")]
+    [Migration("20230612185025_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -96,9 +96,8 @@ namespace MoveRentalSysytem.Migrations
                     b.Property<int>("ProducerId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Rating")
-                        .HasMaxLength(1)
-                        .HasColumnType("char");
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
 
                     b.HasKey("MovieId");
 
